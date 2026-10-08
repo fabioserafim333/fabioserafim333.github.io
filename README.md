@@ -57,6 +57,6 @@ Projeto desenvolvido para praticar conceitos de desenvolvimento web, incluindo:
 
 ## 🌐 Demonstração
 
-O projeto pode ser publicado gratuitamente utilizando o **GitHub Pages**.
+O projeto pode ser acessado por meio do **GitHub Pages**: https://fabioserafim333.github.io/loja_tenis/.
 
 > Projeto fictício desenvolvido para fins de estudo e portfólio.
