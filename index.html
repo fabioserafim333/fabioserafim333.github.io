@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UrbanStep | Calçados</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            Urban<span>Step</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <button class="cart-button" onclick="abrirCarrinho()">
+            🛒 Carrinho
+            <span id="contador-carrinho">0</span>
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">
+                    NOVA COLEÇÃO
+                </p>
+
+                <h1>
+                    Seu estilo começa
+                    <span>aos seus pés.</span>
+                </h1>
+
+                <p>
+                    Descubra nossa coleção de calçados
+                    modernos para todos os momentos.
+                </p>
+
+                <a href="#produtos" class="hero-button">
+                    Ver produtos
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUTOS -->
+
+        <section class="produtos-section" id="produtos">
+
+            <div class="section-header">
+
+                <div>
+                    <p class="section-subtitle">
+                        NOSSA COLEÇÃO
+                    </p>
+
+                    <h2>
+                        Encontre seu próximo par
+                    </h2>
+                </div>
+
+                <div class="filtros">
+
+                    <input
+                        type="text"
+                        id="campo-busca"
+                        placeholder="Buscar produto..."
+                        oninput="filtrarProdutos()"
+                    >
+
+                    <select
+                        id="filtro-categoria"
+                        onchange="filtrarProdutos()"
+                    >
+
+                        <option value="todos">
+                            Todas as categorias
+                        </option>
+
+                        <option value="tenis">
+                            Tênis
+                        </option>
+
+                        <option value="casual">
+                            Casual
+                        </option>
+
+                        <option value="corrida">
+                            Corrida
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="produtos-grid"
+                id="produtos-container"
+            >
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+
+        <section class="sobre" id="sobre">
+
+            <div>
+
+                <p class="section-subtitle">
+                    SOBRE A URBANSTEP
+                </p>
+
+                <h2>
+                    Conforto, estilo e personalidade.
+                </h2>
+
+                <p>
+                    A UrbanStep é uma loja fictícia criada
+                    para demonstrar um projeto de e-commerce
+                    desenvolvido com HTML, CSS e JavaScript.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- CARRINHO -->
+
+    <div
+        class="carrinho-overlay"
+        id="carrinho-overlay"
+        onclick="fecharCarrinhoFora(event)"
+    >
+
+        <aside
+            class="carrinho"
+            onclick="event.stopPropagation()"
+        >
+
+            <div class="carrinho-header">
+
+                <h2>
+                    Seu carrinho
+                </h2>
+
+                <button
+                    onclick="fecharCarrinho()"
+                    class="fechar"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="itens-carrinho"
+                class="itens-carrinho"
+            >
+            </div>
+
+
+            <div class="carrinho-footer">
+
+                <div class="total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="total-carrinho">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+                <button
+                    class="finalizar"
+                    onclick="finalizarCompra()"
+                >
+                    Finalizar compra
+                </button>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 UrbanStep — Projeto fictício para portfólio.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
